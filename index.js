@@ -1,30 +1,42 @@
 for (let i = 1; i < 12; i++) {
-    alert("lectura n°" + i)
+    alert("lectura n°" + i);
+    console.log("Lectura n°" + i);
     let voltaje = prompt("Ingrese voltaje");
     alert("El voltaje es " + voltaje + " volts");
-        if (voltaje === null){
-            valorIncorrecto;
-             alert ("Valor no introducido.")
-            } else {
-                 console.log("Falta valor")}
+    console.log("Voltaje: "+ voltaje + " volts");
+    if (voltaje === null){
+        alert ("Valor no introducido.");
+        valorIncorrecto();
+        break;
+    } 
     let amperaje = prompt("Ingrese corriente");
     alert("La corriente es " + amperaje + " ampers");
+    console.log("Corriente: "+ amperaje + " amperes");
     if (amperaje === null){
-        alert ("Valor no introducido.")
-       } else {
-            console.log("Falta valor")}
+        alert ("Valor no introducido.");
+        valorIncorrecto();
+        break;
+    }
     let resistencia = prompt("Ingrese resistencia");
     alert("La resistencia es " + resistencia + " ohms");
+    console.log("Resistencia: "+ resistencia + " ohms");
     if (resistencia === null){
-        alert ("Valor no introducido.")
-       } else {
-            console.log("Falta valor")}
-} 
-
-function lectura () {
-console.log("Voltaje: "+ voltaje + " volts");
-console.log("Corriente: "+ amperaje + " amperes");
-console.log("Resistencia: "+ resistencia + " ohms");
+        alert ("Valor no introducido.");
+        valorIncorrecto();
+        break;
+    } 
 }
 
-lectura();
+function valorIncorrecto () {
+    alert ('Error de dato')
+    console.log('Error de datos');
+}
+
+console.log(voltaje);
+console.log(amperaje);
+console.log(resistencia);
+
+
+
+
+
